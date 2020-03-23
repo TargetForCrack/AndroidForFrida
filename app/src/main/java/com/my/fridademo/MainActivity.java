@@ -69,10 +69,29 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
+
+    //仅hook外面这个java方法
     public native String getString();
 
     public void ndk_func(View view) {
         String result = getString();
         show_board.setText(result);
     }
+
+    //hook native里面的so方法
+    public native String hookSO(String name, int age, int grade);
+
+    public void ndk_so(View view) {
+        String result = hookSO("Tom", 17, 99);
+        show_board.setText(result);
+    }
+
+    //返回个int
+    public native int hookSO2(int num1, int num2);
+
+    public void ndk_so2(View view) {
+        int result = hookSO2(4, 5);
+        show_board.setText("native 返回值: " + result);
+    }
+
 }

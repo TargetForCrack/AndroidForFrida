@@ -53,4 +53,16 @@
         android:onClick="ndk_func"
         android:text="hook native函数" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ndk_so"
+        android:text="hook so里面的函数" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ndk_so2"
+        android:text="hook so里面的函数2" />
+
 </LinearLayout>
