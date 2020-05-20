@@ -1,10 +1,10 @@
 package com.my.fridademo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +42,28 @@ public class MainActivity extends AppCompatActivity {
         show_board.setText(stu.toString());
     }
 
+    //hook 匿名内部类方法
+    public void internalClassFunc(View view) {
+        ABClass abClass = new ABClass() {
+            @Override
+            public void say(String sentence) {
+                super.say(sentence);
+                show_board.setText(name);
+            }
+        };
+        abClass.say("  MainActivity");
+    }
+
+    //hook 匿名内部类方法 2
+    public void internalClassFunc2(View view) {
+        new ABClass() {
+            @Override
+            public void say2(String sentence) {
+                super.say2(sentence);
+                show_board.setText(name);
+            }
+        }.say2("  MainActivity 2");
+    }
 
     //调用函数
     public void load_func(View view) {

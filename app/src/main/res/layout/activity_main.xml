@@ -44,6 +44,18 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="internalClassFunc"
+        android:text="hook 匿名内部类方法" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="internalClassFunc2"
+        android:text="hook 匿名内部类方法 二" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="staic_func"
         android:text="hook staic静态函数" />
 
