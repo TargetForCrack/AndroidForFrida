@@ -67,18 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
     //调用函数
     public void load_func(View view) {
-//        Util util = new Util();
-//        int result = util.func1(10);
         int result = func1(33);
         show_board.setText("hooked : " + result);
     }
-
+    //MainActivity中的func1 被hook住后 调用Util中的func1，将结果相加再返回
     public int func1(int num) {
         return num + 10;
-    }
-
-    public int func() {
-        return 66;
     }
 
     //util 里的静态方法

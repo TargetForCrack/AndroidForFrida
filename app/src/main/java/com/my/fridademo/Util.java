@@ -2,8 +2,6 @@ package com.my.fridademo;
 
 public class Util {
 
-
-
     //普通方法
     public String ordinaryFunc(String name, String gender, int age) {
         String result = "姓名:" + name + "\t性别:" + gender + "年龄:" + age;
@@ -28,13 +26,9 @@ public class Util {
         return "对照方法";
     }
 
-
-    //函数
+    
+    //函数(hook住MainActivity中的func1，再调用这个方法)
     public int func1(int num) {
-        return num + 10;
-    }
-
-    public int func2(int num) {
         return num * 10;
     }
 
