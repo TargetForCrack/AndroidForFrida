@@ -38,6 +38,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="single_func"
+        android:text="单例中的方法" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="load_func"
         android:text="hook 调用其他函数" />
 

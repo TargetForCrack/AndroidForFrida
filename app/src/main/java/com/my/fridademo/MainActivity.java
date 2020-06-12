@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         show_board.setText(stu.toString());
     }
 
+    //MySingleton 单例里的方法
+    public void single_func(View view) {
+        String result = MySingleton.getInstance().post("MainActivity");
+        show_board.setText(result);
+    }
+
     //hook 匿名内部类方法
     public void internalClassFunc(View view) {
         ABClass abClass = new ABClass() {
@@ -70,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         int result = func1(33);
         show_board.setText("hooked : " + result);
     }
+
     //MainActivity中的func1 被hook住后 调用Util中的func1，将结果相加再返回
     public int func1(int num) {
         return num + 10;
