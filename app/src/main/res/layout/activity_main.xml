@@ -17,70 +17,91 @@
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ordinaryFunc"
-        android:text="hook 普通方法" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="override_function"
-        android:text="hook Overload 重载方法" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="construction_func"
-        android:text="hook 构造方法" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ordinaryFunc"
+                android:text="hook 普通方法" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="single_func"
-        android:text="单例中的方法" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="override_function"
+                android:text="hook Overload 重载方法" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="load_func"
-        android:text="hook 调用其他函数" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="construction_func"
+                android:text="hook 构造方法" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="internalClassFunc"
-        android:text="hook 匿名内部类方法" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="single_func"
+                android:text="单例中的方法" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="internalClassFunc2"
-        android:text="hook 匿名内部类方法 二" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="internalClassFunc"
+                android:text="hook 匿名内部类方法" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="staic_func"
-        android:text="hook staic静态函数" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="internalClassFunc2"
+                android:text="hook 匿名内部类方法 二" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ndk_func"
-        android:text="hook native函数" />
+        </LinearLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ndk_so"
-        android:text="hook so里面的函数" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ndk_so2"
-        android:text="hook so里面的函数2" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="load_func"
+                android:text="hook 调用其他函数" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="staic_func"
+                android:text="hook staic静态函数" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ndk_func"
+                android:text="hook native函数" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ndk_so"
+                android:text="hook so里面的函数" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ndk_so2"
+                android:text="hook so里面的函数2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
