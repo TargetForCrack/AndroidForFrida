@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        show_board = (TextView) findViewById(R.id.show_board_id);
+        show_board = findViewById(R.id.show_board_id);
     }
 
     //util 里的 普通方法
