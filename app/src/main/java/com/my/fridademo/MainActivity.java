@@ -14,12 +14,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private TextView show_board;
+    private Util2 util2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         show_board = findViewById(R.id.show_board_id);
+        util2 = new Util2();
     }
 
     //util 里的 普通方法
@@ -115,6 +117,20 @@ public class MainActivity extends AppCompatActivity {
     public void ndk_so2(View view) {
         int result = hookSO2(4, 5);
         show_board.setText("native 返回值: " + result);
+    }
+
+    //主动调用 静态方法
+    public void active_static_func(View view) {
+        String parma = " Dio";
+        String result = Util2.active_static_call_func(parma);
+        show_board.setText(result);
+    }
+
+    //主动调用 普通方法
+    public void active_func(View view) {
+        String parma = " JOJO";
+        String result = util2.active_call_func(parma);
+        show_board.setText(result);
     }
 
 }
