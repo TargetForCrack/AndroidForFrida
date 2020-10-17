@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='FridaDemo'
+rootProject.name='FridaTargetDemo'
