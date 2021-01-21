@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         show_board.setText(result);
     }
 
-    //hook 匿名内部类方法
+    //hook 抽象类 方法
     public void internalClassFunc(View view) {
         ABClass abClass = new ABClass() {
             @Override
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         abClass.say("  MainActivity");
     }
 
-    //hook 匿名内部类方法 2
+    //hook 抽象类 方法 2
     public void internalClassFunc2(View view) {
         new ABClass() {
             @Override
@@ -73,6 +73,13 @@ public class MainActivity extends AppCompatActivity {
                 show_board.setText(name);
             }
         }.say2("  MainActivity 2");
+    }
+
+    //静态内部类
+    public void static_inner_class_func(View view) {
+        StaticInnerClass.Inner innner = new StaticInnerClass.Inner();
+        String result = innner.func1("p_MainActivity");
+        show_board.setText(result);
     }
 
     //调用函数
