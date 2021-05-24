@@ -82,6 +82,14 @@ public class MainActivity extends AppCompatActivity {
         show_board.setText(result);
     }
 
+    //内部类
+    public void inner_class_func(View view) {
+        OuterClass outerClass = new OuterClass();
+        OuterClass.InternalClass internalClass = outerClass.new InternalClass();
+        String result = internalClass.sayit2("origin value");
+        show_board.setText(result);
+    }
+
     //调用函数
     public void load_func(View view) {
         int result = func1(33);
